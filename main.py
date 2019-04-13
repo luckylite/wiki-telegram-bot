@@ -1,12 +1,12 @@
 import requests
 from bs4 import BeautifulSoup as bs
-import wikipediaapi
+import wikiapi
 import telebot
 from telebot import types
 import time
 
 def wikipedia_api(topic):
-   wiki_wiki = wikipediaapi.Wikipedia('ru')
+   wiki_wiki = wikiapi.Wikipedia('ru')
    page_py = wiki_wiki.page(topic)
 
    return page_py.summary, page_py.fullurl
